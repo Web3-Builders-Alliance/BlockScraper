@@ -21,12 +21,10 @@ const connectToNode = async () => {
 	const bundlr = new Bundlr.default("http://node1.bundlr.network", "arweave", jwk);
 
 	// To connect to our devnet, use either of these instead
-	// const bundlr = new Bundlr.default("https://devnet.bundlr.network", "solana", "<solana private key>", {
-	//    providerUrl: "https://api.devnet.solana.com"
-	// });
-	// const bundlr = new Bundlr.default("https://devnet.bundlr.network", "matic", "<ethereum private key>", {
-	//    providerUrl: "https://rpc-mumbai.matic.today"
-	// });
+	const bundlr = new Bundlr.default("https://devnet.bundlr.network", "solana", "<solana private key>", {
+	    providerUrl: "https://api.devnet.solana.com"
+	 });
+	
 
 	// Print your wallet address
 	console.log(`wallet address = ${bundlr.address}`);
