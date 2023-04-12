@@ -23,7 +23,7 @@ async function main() {
 	console.log('account funded balance=${balance.toString()}');
 
 	const decimalBalance = bundlr.utils.unitConverter(balance);
-	console.log('account funded decimal balance=${balance.toString()}');
+	console.log('account funded decimal balance=${decimalBalance.toString()}');
 }
 
 main();
