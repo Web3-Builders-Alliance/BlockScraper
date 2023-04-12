@@ -10,7 +10,7 @@ async function main() {
 		"solana",
 		process.env.PRIVATE_KEY,
 		{
-			providerUrl: "",
+			providerUrl: "https://explorer.solana.com/?cluster=devnet",
 		},
 	);
 }
