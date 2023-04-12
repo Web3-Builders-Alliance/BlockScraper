@@ -15,6 +15,8 @@ async function main() {
 	);
 
 	console.log('Connected to node, wallet address ${bundlr.address}');
+
+	const fundTx = await bundlr.fund(1e18);
 }
 
 
