@@ -25,7 +25,7 @@ async function main() {
 	//const decimalBalance = bundlr.utils.unitConverter(balance);
 	//console.log('account funded decimal balance=${decimalBalance.toString()}');
 
-	const pathToFile = "bundlr/article.png";
+	const pathToFile = "/Users/atatekeli/Documents/GitHub/Capstone-BlockScraper/Finals/bundlr/article.png";
 	const uploadTx = await bundlr.uploadFile(pathToFile);
 	console.log('File uploaded URL=https://arweave.net/${uploadTx.id}');
 }
