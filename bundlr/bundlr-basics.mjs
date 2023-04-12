@@ -16,14 +16,14 @@ async function main() {
 
 	console.log('Connected to node, wallet address ${bundlr.address}');
 
-	//const fundTx = await bundlr.fund(1e9);
-	//console.log('Fund successful, amount funded = ${fundTx.quantity}');
+	const fundTx = await bundlr.fund(1e9);
+	console.log('Fund successful, amount funded = ${fundTx.quantity}');
 
-	//const balance = await bundlr.getLoadedBalance();
-	//console.log('account funded balance=${balance.toString()}');
+	const balance = await bundlr.getLoadedBalance();
+	console.log('account funded balance=${balance.toString()}');
 
-	//const decimalBalance = bundlr.utils.unitConverter(balance);
-	//console.log('account funded decimal balance=${decimalBalance.toString()}');
+	const decimalBalance = bundlr.utils.unitConverter(balance);
+	console.log('account funded decimal balance=${decimalBalance.toString()}');
 
 	const pathToFile = "/Users/atatekeli/Documents/GitHub/Capstone-BlockScraper/Finals/bundlr/article.png";
 	const uploadTx = await bundlr.uploadFile(pathToFile);
