@@ -13,6 +13,8 @@ async function main() {
 			providerUrl: "https://explorer.solana.com/?cluster=devnet",
 		},
 	);
+
+	console.log('Connected to node, wallet address ${bundlr.address}');
 }
 
 
