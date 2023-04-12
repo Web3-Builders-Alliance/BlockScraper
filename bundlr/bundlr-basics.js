@@ -9,6 +9,9 @@ async function main() {
 		"https://devnet.bundlr.network",
 		"solana",
 		process.env.PRIVATE_KEY,
+		{
+			providerUrl: "",
+		},
 	);
 }
 
