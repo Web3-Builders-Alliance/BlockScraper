@@ -20,7 +20,10 @@ async function main() {
 	//console.log('Fund successful, amount funded = ${fundTx.quantity}');
 
 	const balance = await bundlr.getLoadedBalance();
-	console.log('accound funded balance=${balance.toString()}');
+	console.log('account funded balance=${balance.toString()}');
+
+	const decimalBalance = bundlr.utils.unitConverter(balance);
+	console.log('account funded decimal balance=${balance.toString()}');
 }
 
 main();
