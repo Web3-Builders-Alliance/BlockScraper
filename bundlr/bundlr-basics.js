@@ -17,6 +17,7 @@ async function main() {
 	console.log('Connected to node, wallet address ${bundlr.address}');
 
 	const fundTx = await bundlr.fund(1e9);
+	console.log('Fund successful, amount funded = ${fundTx.quantity}');
 }
 
 
