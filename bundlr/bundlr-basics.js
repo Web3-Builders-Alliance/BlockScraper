@@ -25,7 +25,7 @@ async function main() {
 	const decimalBalance = bundlr.utils.unitConverter(balance);
 	console.log('account funded decimal balance=${decimalBalance.toString()}');
 
-	const pathToFile = ""
+	const pathToFile = "bundlr/article.png"
 }
 
 main();
