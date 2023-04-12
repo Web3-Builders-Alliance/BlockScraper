@@ -65,6 +65,7 @@
     "delay": "^5.0.0",
     "delayed-stream": "^1.0.0",
     "depd": "^2.0.0",
+    "dotenv": "^16.0.3",
     "elliptic": "^6.5.4",
     "emoji-regex": "^8.0.0",
     "error-polyfill": "^0.1.3",
