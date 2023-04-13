@@ -13,11 +13,14 @@ ArDrive
 
 File: d76dce72-24cc-4229-8b8d-785b8b21b519
 
-Metadata: 1tmxCMFmwXSyeStamqEcqa8JBnGeQ_l2jdb4ERGwBsM Data Tx: rYWt6T3eLn15_NnmNeqJsxuTMZZH2wZwqFvGgsYwv60 
+Metadata: 1tmxCMFmwXSyeStamqEcqa8JBnGeQ_l2jdb4ERGwBsM 
+
+Data Tx: rYWt6T3eLn15_NnmNeqJsxuTMZZH2wZwqFvGgsYwv60 
 
 Bundlr Tx: HobfCl-nHa1Gkqo5rnGI4lSE6BcnUsyxpamuxclIPIk
 
 Preview:
-https://vwc232j53yxh26p43htdl2ujwmnzgmmwi7nqm4filpdifrrqx6wq.arweave.net/r YWt6T3eLn15_NnmNeqJsxuTMZZH2wZwqFvGgsYwv60
 
-TX Link: https://viewblock.io/arweave/tx/1tmxCMFmwXSyeStamqEcqa8JBnGeQ_l2jdb4ERGw BsM
+https://vwc232j53yxh26p43htdl2ujwmnzgmmwi7nqm4filpdifrrqx6wq.arweave.net/rYWt6T3eLn15_NnmNeqJsxuTMZZH2wZwqFvGgsYwv60
+
+TX Link: https://viewblock.io/arweave/tx/1tmxCMFmwXSyeStamqEcqa8JBnGeQ_l2jdb4ERGwbBsM
