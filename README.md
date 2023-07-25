@@ -1,4 +1,22 @@
 # Capstone-BlockScraper
+
+It is a capstone project mainly focused on analytics. It serves as a proof of concept and separate development will be made. 
+
+## Data Methods
+
+-On-chain
+-Off-chain
+
+## Features
+
+-Product Metrics
+-Marketing Metrics
+
+## Membership Tiers
+
+-Corporate
+-Personal
+
 Web Scraping on Solana with Arweave storage
 
 Video submission: https://www.youtube.com/watch?v=vLBBa6oOIoM
