@@ -21,5 +21,5 @@ It is a capstone project mainly focused on analytics. It serves as a proof of co
 
 ## Membership Tiers
 
--Corporate
--Personal
+- Corporate
+- Personal
