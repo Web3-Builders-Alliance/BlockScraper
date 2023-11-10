@@ -2,7 +2,7 @@
 
 import { scrapeAndStoreText } from "../scraper";
 
-export async function scrapeAndStoreURL(webURL: string) {
+export async function scrapeURL(webURL: string) {
     if(!webURL) return;
 
     try {

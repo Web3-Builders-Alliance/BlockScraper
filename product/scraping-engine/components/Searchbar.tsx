@@ -1,4 +1,5 @@
 "use client"
+import { scrapeAndStoreText } from '@/lib/scraper';
 import React, { FormEvent, useState } from 'react';
 
 const isValidWebsiteURL = (url: string) => {
@@ -24,7 +25,7 @@ const Searchbar = () => {
   const [searchPrompt, setSearchPrompt] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const isValidLink = isValidWebsiteURL(searchPrompt);
@@ -33,6 +34,8 @@ const Searchbar = () => {
 
     try {
       setIsLoading(true);
+      //Scrape the web URL
+      const URL = await scrapeAndStoreText(searchPrompt);
     } catch (error) {
       console.log(error);
     } finally {
