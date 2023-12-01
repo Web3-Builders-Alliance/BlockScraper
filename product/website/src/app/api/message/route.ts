@@ -1,3 +1,5 @@
+import { db } from "@/db";
+import { SendMessageValidator } from "@/lib/validators/SendMessageValidator";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/dist/types/server";
 import { NextRequest } from "next/server";
 
@@ -12,5 +14,13 @@ export const POST = async (req: NextRequest) => {
 
     if(!userId) return new Response("Unauthorized", {status: 401})
 
-    const {}
+    const {message} = SendMessageValidator.parse(body)
+
+    await db.message.create({
+        data: {
+            text: message,
+            isUserMessage: true,
+            userId,
+        }
+    })
 }
