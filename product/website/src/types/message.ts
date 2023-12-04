@@ -5,6 +5,9 @@ import { inferRouterOutputs } from "@trpc/server";
 type RouterOutput = inferRouterOutputs<AppRouter>
 
 type ExtendedText = {
+    createdAt: string | number | Date;
+    id: string;
+    isUserMessage: any;
     text: string | JSX.Element
 }
 

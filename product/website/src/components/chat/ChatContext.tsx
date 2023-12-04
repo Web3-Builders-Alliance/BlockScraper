@@ -1,6 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { ReactNode, createContext, useState } from "react";
 import { useToast } from "../ui/use-toast";
+import { trpc } from "@/app/_trpc/client";
 
 type StreamResponse = {
     addMessage: () => void,
@@ -25,6 +26,8 @@ interface Props {
 export const ChatContextProvider = ({children}: Props) => {
     const [message, setMessage] = useState<string>('')
     const [isLoading, setIsLoading] = useState<boolean>(false)
+
+    const utils = trpc.useContext()
 
     const {toast} = useToast()
 
