@@ -1,5 +1,5 @@
 import { useMutation } from "@tanstack/react-query";
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useRef, useState } from "react";
 import { useToast } from "../ui/use-toast";
 import { trpc } from "@/app/_trpc/client";
 
@@ -31,6 +31,8 @@ export const ChatContextProvider = ({children}: Props) => {
 
     const {toast} = useToast()
 
+    const backupMessage = useRef('')
+
     const {mutate: sendMessage} = useMutation({
         mutationFn: async({message}: {message: string}) => {
             const response = await fetch('/api/message', {
@@ -46,6 +48,10 @@ export const ChatContextProvider = ({children}: Props) => {
 
             return response.body
         },
+        onMutate: () => {
+            backupMessage.current = message
+            setMessage('')
+        }
     })
 
     const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
