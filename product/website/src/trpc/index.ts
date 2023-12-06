@@ -2,14 +2,14 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import {publicProcedure, router} from "./trpc"
 import { TRPCError } from "@trpc/server"
 import { db } from "@/db"
+import { getUserSubscriptionPlan, stripe } from "@/lib/stripe"
 
 export const appRouter = router({
     authCallback: publicProcedure.query(async () => {
         const {getUser} = getKindeServerSession()
         const user = getUser()
 
-        if(!user.id || !user.email) 
-            throw new TRPCError({code: "UNAUTHORIZED"})
+        if(!user.id || !user.email) throw new TRPCError({code: "UNAUTHORIZED"})
 
         // check if the user is in the database
         const dbUser = await db.user.findFirst({
@@ -26,7 +26,10 @@ export const appRouter = router({
                     email: user.email
                 }
             })
-        }
+
+            if(!dbUser) throw new TRPCError({code: "UNAUTHORIZED"})
+
+            const subscriptionPlan = await getUserSubscriptionPlan()
 
         return {success: true}
     })
