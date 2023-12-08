@@ -57,8 +57,13 @@ export const appRouter = router({
             price: PLANS.find((plan) => plan.name === "Individual")?.price.priceIds.test,
             quantity: 1,
           }
-        ]
+        ],
+        metadata: {
+          userId: userId
+        }
       })
+
+      return {url: stripeSession.url}
     })
 
     if (!user.id || !user.email)
