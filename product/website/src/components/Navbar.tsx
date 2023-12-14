@@ -17,7 +17,7 @@ const Navbar = () => {
                     {/* add mobile navbar */}
 
                     <div className = "hidden items-center space-x-4 sm:flex">
-                        <>
+                        {<>
                             <Link href = "/pricing" 
                             className = {buttonVariants({
                                 variant: "ghost",
@@ -38,7 +38,7 @@ const Navbar = () => {
                                 })}>
                                     Get started
                                 </RegisterLink>
-                        </>
+                        </>}
                     </div>
                 </div>
             </MaxWidthWrapper>
